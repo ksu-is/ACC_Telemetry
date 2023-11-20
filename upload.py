@@ -15,11 +15,11 @@ def uploadButton(source, filter_source, track_select, car_select):
 
     import os, base64
 
-    file_source = ColumnDataSource({'file_contents':[], 'file_name':[]})
+    file_source = ColumnDataSource({'file_contents':[], r'C:\Users\tsche\OneDrive\Documents\Assetto Corsa Competizione\MoTeC':[]})
 
     def file_callback(attr, old,new):
-        print('filename:', file_source.data['file_name'])
-        f = os.path.join(os.environ['TELEMETRY_FOLDER'], file_source.data['file_name'][0])
+        print('filename:', file_source.data[r'C:\Users\tsche\OneDrive\Documents\Assetto Corsa Competizione\MoTeC'])
+        f = os.path.join(os.environ['TELEMETRY_FOLDER'], file_source.data[r'C:\Users\tsche\OneDrive\Documents\Assetto Corsa Competizione\MoTeC'][0])
         if os.path.splitext(f)[1] not in ['.ld', '.ldx'] or os.path.exists(f):
             button.disabled = False
             return
