@@ -706,6 +706,7 @@ def scanDB(db):
             "%i:%02i.%03i"%(l['laptime'][i]//60, l['laptime'][i]%60, (l['laptime'][i]*1e3) % 1000),
             l['driver'][i]) for i in range(len(l['sid']))]
 
+TELEMETRY_FOLDER = (r"C:\Users\tsche\OneDrive\Documents\Assetto Corsa Competizione\MoTeC")
 
 def updateTableData(source, filter_source, track_select, car_select):
     data = scanFiles(glob.glob(os.path.join(os.environ['TELEMETRY_FOLDER'].strip("'"), '*.ld')))
